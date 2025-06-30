@@ -135,11 +135,15 @@ public static void main(String[] args) {
 		
 		System.out.println(list3.parallelStream().map(x->factorial(x)).toList());
 	
-		//
+		//convert n number of list as a single list.
 		List<List<String>> asList6 = Arrays.asList(Arrays.asList("Apple","Banana"),Arrays.asList("Orange","kiwi"),Arrays.asList("pear","grapes"));
 		System.out.println("Before doing operations: "+asList6);
 		List<String> list4 = asList6.stream().flatMap(x->x.stream()).toList();
 		System.out.println(list4);
+		String s1="Before doing operations";
+		StringBuilder sb=new StringBuilder();
+		s1.chars().forEach(x->sb.append(x).reverse());
+		//Arrays.asList("Hello world","")
 }
 public static   int  factorial(int n) {
 	int result=1;
